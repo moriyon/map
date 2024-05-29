@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.61">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Southern Island Itinerary Map&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="map" style="width: 100%; height: 600px;"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>var map = L.map('map').setView([-45.0, 168.0], 7);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>maxZoom: 18,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}).addTo(map);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>var locations = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Christchurch", "coords": [-43.5320, 172.6362]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Geraldine Farm Tours", "coords": [-44.0994, 171.2455]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Rakaia River", "coords": [-43.7591, 172.0215]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Mt Hutt", "coords": [-43.4878, 171.5318]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Hakatere Conservation Park", "coords": [-43.5704, 171.0593]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Edoras (Lord of the Rings)", "coords": [-43.4405, 171.2837]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Mt Sunday Swing Bridge", "coords": [-43.5202, 171.2123]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Lake Tekapo", "coords": [-44.0044, 170.4800]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Lake Pukaki", "coords": [-44.1640, 170.1015]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Aoraki / Mount Cook", "coords": [-43.5950, 170.1411]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Tasman Glacier Viewpoint", "coords": [-43.7243, 170.1654]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Westland Tai Poutini National Park", "coords": [-43.3500, 169.9667]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Fox Glacier Valley Walk", "coords": [-43.4711, 170.0260]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Fox Glacier Heli Hiking", "coords": [-43.4683, 170.0186]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Franz Josef Glacier Guides", "coords": [-43.3856, 170.1817]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Lake Matheson Walk", "coords": [-43.4408, 170.1771]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Hokitika Gorge", "coords": [-42.7144, 171.1033]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Castle Hill Domain", "coords": [-43.3030, 171.7100]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Banks Peninsula", "coords": [-43.7828, 172.8880]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Lothlórien (Lord of the Rings)", "coords": [-43.7702, 170.3500]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Routeburn Track", "coords": [-44.7828, 168.1890]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Milford Sound", "coords": [-44.6704, 167.9270]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Queenstown", "coords": [-45.0312, 168.6626]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Skyline Queenstown", "coords": [-45.0264, 168.6608]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Fergburger", "coords": [-45.0312, 168.6626]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Moke Lake", "coords": [-44.9925, 168.5764]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Te Wahipounamu", "coords": [-44.0625, 168.2194]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Sutherland Falls", "coords": [-44.7667, 167.7980]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Lake Wanaka Lookout", "coords": [-44.6930, 169.1320]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Rob Roy Track", "coords": [-44.4495, 168.7170]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Hooker Valley Track", "coords": [-43.7334, 170.0969]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Mueller Hut Route", "coords": [-43.7330, 170.1080]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Hidden Falls", "coords": [-44.7238, 168.1383]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Cascade Saddle", "coords": [-44.4681, 168.6961]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Wishbone Falls", "coords": [-44.6228, 168.3844]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Mount Aspiring National Park", "coords": [-44.3833, 168.7333]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Bridal Veil Falls", "coords": [-44.6981, 167.8623]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Craigieburn Valley Ski Area", "coords": [-43.0910, 171.5575]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Flower Brothers Walk", "coords": [-41.9470, 172.8415]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Lake Rotoroa", "coords": [-41.8668, 172.6297]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{"name": "Nelson Lakes National Park", "coords": [-41.9469, 172.6324]}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>for (var i = 0; i &lt; locations.length; i++) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>L.marker(locations[i].coords).addTo(map)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.bindPopup(locations[i].name)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.openPopup();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
